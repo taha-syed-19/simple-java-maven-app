@@ -18,7 +18,7 @@ pipeline {
         stage("Build Jar") {
             steps {
                 script {
-                    gv.buildJar
+                    gv.buildJar()
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage("Build Image") {
             steps {
                 script {
-                    gv.buildImage
+                    gv.buildImage()
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage("Deploying App") {
             steps {
                 script {
-                    gv.deployApp
+                    gv.deployApp()
                 }
             }
         }
