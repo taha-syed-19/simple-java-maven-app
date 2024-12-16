@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven: 'MVN Check'
+        maven 'MVN Check'
     }
 
     stages {
