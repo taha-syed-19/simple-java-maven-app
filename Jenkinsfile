@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     echo "Building image..."
-                    buildImage 'tahasyed19/tahasyed:latest'// Assuming custom logic exists in buildImage()
+                    buildImage 'tahasyed19/tahasyed:2.0.1'// Assuming custom logic exists in buildImage()
                 }
             }
         }
