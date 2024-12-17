@@ -15,8 +15,8 @@ pipeline {
         stage("build jars") {
             steps {
                 script {
-                    echo "building jar"
-                    buildJar()
+                    echo "building jarss"
+                    buildJars()
                 }
             }
         }
