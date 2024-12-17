@@ -12,7 +12,7 @@ pipeline {
                 }
             }
         }
-        stage("build jar") {
+        stage("build jars") {
             steps {
                 script {
                     echo "building jar"
