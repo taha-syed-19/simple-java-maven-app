@@ -4,6 +4,11 @@ def gv
 
 pipeline {
     agent any
+
+    tools {
+        maven 'My-Maven' // Use the Maven tool installed as 'My-Maven'
+    }
+
     stages {
         stage("init") {
             steps {
@@ -15,26 +20,27 @@ pipeline {
         stage("build jars") {
             steps {
                 script {
-                    echo "building jarss"
-                    buildJars()
+                    echo "Building jars..."
                 }
+                // Use Maven to build the jars
+                sh "mvn clean package"
             }
         }
         stage("build image") {
             steps {
                 script {
-                    echo "building image"
-                    buildImage()
+                    echo "Building image..."
+                    buildImage() // Assuming custom logic exists in buildImage()
                 }
             }
         }
         stage("deploy") {
             steps {
                 script {
-                    echo "deploying"
-                    gv.deployApp()
+                    echo "Deploying..."
+                    gv.deployApp() // Assuming deployApp exists in the shared library
                 }
             }
         }
-    }   
+    }
 }
