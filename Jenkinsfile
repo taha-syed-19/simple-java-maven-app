@@ -18,7 +18,7 @@ pipeline {
         stage("Build Jar") {
             steps {
                 script {
-                    gv.buildJar 'tahasyed19/tahasyed:3.5'
+                    gv.buildJar()
                 }
             }
         }
