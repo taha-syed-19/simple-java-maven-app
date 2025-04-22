@@ -21,9 +21,10 @@ pipeline {
             steps {
                 script {
                     echo "Building jars..."
+                    buildJar()
                 }
                 // Use Maven to build the jars
-                sh "mvn clean package"
+                    
             }
         }
         stage("build image") {
