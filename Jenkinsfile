@@ -3,7 +3,7 @@ def gv
 pipeline {
     agent any
     tools {
-        maven 'MVN Check'
+        maven 'mvn' #check mvn is there or not in tools og Jenkisn UI
     }
 
     stages {
