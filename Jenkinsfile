@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'My-Maven' // Use the Maven tool installed as 'My-Maven'
+        maven 'mvn' // Use the Maven tool installed as 'My-Maven'
     }
 
     stages {
