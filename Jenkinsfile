@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     echo "Building jars..."
-                    buildJar()
+                    buildJars()
                 }
                 // Use Maven to build the jars
                     
