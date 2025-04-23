@@ -20,7 +20,7 @@ pipeline {
             steps {
                script {
                   echo 'building application jar...'
-                  buildJar()
+                  buildJars()
                }
             }
         }
