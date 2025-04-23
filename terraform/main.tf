@@ -2,28 +2,6 @@ provider "aws" {
     region = "ap-south-1"
 }
 
-variable "vpc_cidr_block" {
-    default = "10.0.0.0./16"
-}
-variable "subnet_cidr_block" {
-    default = "10.0.1.0/24"
-}
-variable "availability_zone" {
-    default = "ap-south-1a"
-}
-variable "env_prefix" {
-    default = "dev"
-}
-variable "my_ip" {
-    default = "223.233.85.130/24"
-}
-variable "instance_type" {
-    default = "t2.micro"
-}
-
-
-
-
 resource "aws_vpc" "my_vpc" {
     cidr_block = var.vpc_cidr_block
     tags = {
