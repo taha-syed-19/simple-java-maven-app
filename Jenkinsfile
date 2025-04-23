@@ -2,18 +2,18 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
     [$class: 'GitSCMSource',
-     remote: 'https://gitlab.com/nanuchi/jenkins-shared-library.git',
-     credentialsId: 'gitlab-credentials'
+     remote: 'https://github.com/taha-syed-19/Jenkins-shared-library.git',
+     credentialsId: 'github-credentials'
     ]
 )
 
 pipeline {
     agent any
     tools {
-        maven 'Maven'
+        maven 'mvn'
     }
     environment {
-        IMAGE_NAME = 'nanajanashia/demo-app:java-maven-2.0'
+        IMAGE_NAME = 'tahasyed19/tahasyed:4.0'
     }
     stages {
         stage('build app') {
@@ -55,7 +55,7 @@ pipeline {
         }
         stage('deploy') {
             environment {
-                DOCKER_CREDS = credentials('docker-hub-repo')
+                DOCKER_CREDS = credentials('Docker-Auth')
             }
             steps {
                 script {
